@@ -70,6 +70,9 @@ class PlayerController {
       .catch(next);
   }
   edit(req, res, next) {
+    if (req.body.isCaptain == undefined) {
+      req.body.isCaptain = false;
+    }
     Players.updateOne({ _id: req.params.playerId }, req.body)
       .then(() => {
         res.redirect("/players");
