@@ -12,7 +12,7 @@ var playersRouter = require("./routes/playerRouter");
 var app = express();
 const mongoose = require("mongoose");
 const Nations = require("./model/nation");
-const url = "mongodb://localhost:27017/wc2022";
+const url = "mongodb://127.0.0.1/test";
 const connect = mongoose.connect(url);
 connect
   .then(

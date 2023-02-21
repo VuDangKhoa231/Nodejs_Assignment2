@@ -13,7 +13,7 @@
                     <div class="field-body">
                         <div class="field">
                             <div class="control">
-                                <input class="input is-info" name="name" type="text" placeholder="e.g. Brazil">
+                                <input class="input is-info" name="name" required type="text" placeholder="Example: Argentina">
                             </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                     <div class="field-body">
                         <div class="field">
                             <div class="control">
-                                <input class="input is-info" name="description" type="text" placeholder="Let's description">
+                                <input class="input is-info" name="description" required type="text" placeholder="More description">
                             </div>
         
                         </div>
@@ -35,7 +35,7 @@
                 <div class="field is-horizontal">
                     <div class="field-body">
                         <div class="field">
-                            <div class="control">
+                            <div class="buttonCreate">
                                 <button class="button is-primary" type="submit">
                                     Create
                                 </button>
@@ -67,7 +67,6 @@
                                     <div class="buttons are-small">
                                         <a href="./nations/edit/<%=nation.id %>"><button class="button is-warning is-light">Edit</button></a>
                                         <a href="./nations/delete/<%=nation.id %>"><button onclick="return confirm('Are you sure ???')" class="button is-danger is-light">Delete</button></a>
-
                                     </div></a>
                                 </td>
                             </tr>

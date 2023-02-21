@@ -39,14 +39,12 @@ class PlayerController {
     Players.find({ name: player.name })
       .then((player) => {
         if (player) {
-          console.log("Dup:");
           return res.redirect("/players");
         }
       })
       .catch(next);
     console.log("Player", player.isCaptain);
     if (player.isCaptain == undefined) {
-      console.log("abc");
       player.isCaptain = false;
     }
     player
